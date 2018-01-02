@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+  padding: 0;
+  margin: 0 auto;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+}
+footer {
+  text-align: center;
+}
+a {
+  text-decoration: none;
+  color: #257;
+}
+a:visited {
+  color: #257;
+}
+#heading {
+  margin-bottom: 10px;
+  padding: 20px;
+  padding-bottom: 30px;
+  background-color: #4ea0ed;
+}
+#heading > p {
+  text-align: center;
+  font-size: 44px;
+}
+#heading > span > p {
+  margin-right: 20px;
+  float: right;
+  cursor: pointer;
+}
+#heading a:hover {
+  color: #FFF;
+}
+#content {
+  width: 80%;
+  text-align: center;
+}
+#content > div {
+  box-shadow: 2px 2px 5px #555;
+  vertical-align: top;
+  cursor: pointer;
+}
+#content > .userDiv {
+  display: block;
+  margin: 10px auto;
+  width: 60%;
+  height: auto;
+  /*height: 50px;*/
+  border: 2px solid black;
+  box-shadow: 3px 5px 5px #555;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+#content > .userDiv > span {
+  margin: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+#content > .sBoardDiv:hover {
+  box-shadow: 0 0 0;
+}
+@media screen and (min-width: 1106px) {
+  #content > div {
+    display: inline-block;
+    width: 22%;
+    border: 2px solid black;
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 985px) and (max-width: 1105px) {
+  #content > div {
+    display: inline-block;
+    width: 28%;
+    border: 2px solid black;
+    margin: 10px;
+  }
+}
+@media screen and (min-width: 469px) and (max-width: 984px) {
+  #content > div {
+    display: inline-block;
+    width: 40%;
+    border: 2px solid black;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 468px) {
+  #content > div {
+    display: inline-block;
+    width: 90%;
+    border: 2px solid black;
+    margin: 10px;
+  }
+}

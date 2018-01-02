@@ -1,0 +1,71 @@
+*****************************************
+BEFORE changes
+*****************************************
+
+index.php
+------------------------------------------
+No Throttling: Finish 403ms 
+               21.3K transferred 
+               DOMLoaded 321ms
+               Loaded 407ms
+Slow 3G:       Finish 6.49s
+               21.3KB
+               DOMLoaded 4.21s
+               Loaded 6.49s
+
+publicBoard.php
+-----------------------------------------
+(Boardname: Efficiency Check, 12 images(1.3MB), 12 sounds(180KB))
+No Throtting: Finish 11.59s
+              1.4MB
+              DOMLoaded 10.58s
+              Load 11.55s
+Slow 3G:      Finish 33.93s
+              1.4MB
+              DOMLoaded 4.18s
+              Load 33.94s
+
+myboards.php
+----------------------------------------
+No Throtting: Finish 318ms
+              DOMLoaded 263ms
+              21.3KB
+              Load 321ms
+Slow 3G:      Finish 6.44s
+              DOMLoaded 6.16s
+              21.3KB
+              Load 6.44s
+
+board.php
+---------------------------------------
+(Boardname: Efficiency Check, 12 images(1.3MB), 12 sounds(180KB))
+No Throtting: Finish 1.22s
+              DOMLoaded 238ms
+              1.4MB
+              Loaded 1.22s              
+Slow 3G:      Finish 32.51s
+              DOMLoaded 4.27s
+              1.4MB
+              Load 32.52s
+
+*****************************************
+AFTER changes
+*****************************************
+We already had a pretty well performing site; however, we did a lot of
+polishing and we specifically added MOD_PAGESPEED to Apache. This improved
+our performance times by approximately 5%.
+
+We also added pagination which improved performance by only fetching the
+necessary amount of data from the server, depending on the page the user
+is viewing.
+
+We also made many security improvements, including locking down our assets
+directory as well as our database access configurations. We added client-side
+file type checks (besides the back-end file type checks) so that clients cannot
+upload files that are not image or audio files.
+
+We also improved validation by sanitizing fetching scripts to prevent malicious
+code being run on our fetch scripts.
+
+We also polished further by making sure error messages like bad username/password
+or bad signup/bad email are clearly shown to the user.
